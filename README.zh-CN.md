@@ -14,7 +14,7 @@
 [![Workflow](https://img.shields.io/badge/workflow-adaptive--composite-purple)](./references/visual-routes.md)
 [![QA](https://img.shields.io/badge/QA-quality--gate-blue)](./references/quality-gate.md)
 
-[GitHub 仓库](https://github.com/ChuluuMGL/social-cover-layout) | [Skill 定义](./SKILL.md) | [平台规格](./references/platform-specs.md) | [视觉路线](./references/visual-routes.md) | [配色系统](./references/color-system.md) | [质量门](./references/quality-gate.md) | [测试矩阵](./TESTING.md) | [发布边界](./PUBLISHING.md)
+[GitHub 仓库](https://github.com/ChuluuMGL/social-cover-layout) | [Demo 图库](./demo/README.md) | [Skill 定义](./SKILL.md) | [平台规格](./references/platform-specs.md) | [视觉路线](./references/visual-routes.md) | [配色系统](./references/color-system.md) | [质量门](./references/quality-gate.md) | [测试矩阵](./TESTING.md) | [发布边界](./PUBLISHING.md)
 
 ## 3 分钟开始使用
 
@@ -35,6 +35,14 @@ cd social-cover-layout
 ```
 
 它也可以由内容创作流程在正文完成后，通过结构化 brief 调用。
+
+## Demo 样张
+
+下面是之前 Website Skill 和 Content Creation Skill 测试中实际生成的封面。平台尺寸和安全区测试单独放在[技术测试包](./demo/technical-platform-tests/)中，不作为主视觉 Demo。
+
+![Website Skill 封面 Demo](./demo/previous-cases/website-skill-10-palettes.jpg)
+
+完整内容见[Demo 图库](./demo/README.md)。
 
 ## 这个 Skill 做什么
 

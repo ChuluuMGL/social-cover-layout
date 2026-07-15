@@ -14,7 +14,7 @@
 [![Workflow](https://img.shields.io/badge/workflow-adaptive--composite-purple)](./references/visual-routes.md)
 [![QA](https://img.shields.io/badge/QA-quality--gate-blue)](./references/quality-gate.md)
 
-[GitHub Repository](https://github.com/ChuluuMGL/social-cover-layout) | [Skill Definition](./SKILL.md) | [Platform Specs](./references/platform-specs.md) | [Visual Routes](./references/visual-routes.md) | [Color System](./references/color-system.md) | [Quality Gate](./references/quality-gate.md) | [Testing Matrix](./TESTING.md) | [Publishing Boundary](./PUBLISHING.md)
+[GitHub Repository](https://github.com/ChuluuMGL/social-cover-layout) | [Demo Gallery](./demo/README.md) | [Skill Definition](./SKILL.md) | [Platform Specs](./references/platform-specs.md) | [Visual Routes](./references/visual-routes.md) | [Color System](./references/color-system.md) | [Quality Gate](./references/quality-gate.md) | [Testing Matrix](./TESTING.md) | [Publishing Boundary](./PUBLISHING.md)
 
 ## 3-Minute Quick Start
 
@@ -37,6 +37,14 @@ Generation mode: generate.
 ```
 
 The Skill can also be called by a content-production workflow after the writing brief is complete.
+
+## Demo Preview
+
+These are actual generated outputs from the earlier Website Skill and Content Creation Skill tests. The platform-ratio checks are kept separately in the [technical test pack](./demo/technical-platform-tests/).
+
+![Website Skill cover demo](./demo/previous-cases/website-skill-10-palettes.jpg)
+
+See the full [Demo Gallery](./demo/README.md).
 
 ## What This Skill Does
 
