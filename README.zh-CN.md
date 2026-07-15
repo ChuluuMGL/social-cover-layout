@@ -8,7 +8,7 @@
 [English](README.md) | 中文说明
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-social--cover--layout-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-0.2.3-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-0.2.4-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![by Chuluu](https://img.shields.io/badge/by-Chuluu-0E5E43)](https://github.com/ChuluuMGL)
 [![Workflow](https://img.shields.io/badge/workflow-adaptive--composite-purple)](./references/visual-routes.md)
@@ -40,11 +40,23 @@ cd social-cover-layout
 
 下面是之前 Website Skill 和 Content Creation Skill 测试中实际生成的封面；新的[跨平台生成 Demo](./demo/generated-platform-demos/)包含 X、微信公众号、YouTube 和 B 站版本，[P0 多语言 Demo](./demo/multilingual-p0-demos/)包含简体中文、繁体中文、英文、日文和韩文。平台尺寸和安全区测试单独放在[技术测试包](./demo/technical-platform-tests/)中，不作为主视觉 Demo。
 
-![Website Skill 封面 Demo](./demo/previous-cases/website-skill-8-palettes.jpg)
-
 ![跨平台生成封面 Demo](./demo/generated-platform-demos/generated-platform-contact-sheet.jpg)
 
-查看五张独立的 [P0 多语言封面 Demo](./demo/multilingual-p0-demos/)。
+### P0 多语言独立封面
+
+下面是五张真正的独立封面，不是语言说明图，也不是配色卡：
+
+<table>
+  <tr>
+    <td><img src="./demo/multilingual-p0-demos/zh-hans-content-creation-skill.png" alt="简体中文封面" width="180"></td>
+    <td><img src="./demo/multilingual-p0-demos/zh-hant-content-creation-skill.png" alt="繁体中文封面" width="180"></td>
+    <td><img src="./demo/multilingual-p0-demos/en-content-creation-skill.png" alt="英文封面" width="180"></td>
+    <td><img src="./demo/multilingual-p0-demos/ja-content-creation-skill.png" alt="日文封面" width="180"></td>
+    <td><img src="./demo/multilingual-p0-demos/ko-content-creation-skill.png" alt="韩文封面" width="180"></td>
+  </tr>
+</table>
+
+查看[五张独立的 P0 多语言封面 Demo](./demo/multilingual-p0-demos/)。之前的配色长图仍保留在 [`demo/previous-cases/`](./demo/previous-cases/) 作为历史测试，不再作为首页主 Demo。
 
 完整内容见[Demo 图库](./demo/README.md)。
 

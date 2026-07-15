@@ -8,7 +8,7 @@
 [中文说明](README.zh-CN.md) | English
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-social--cover--layout-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-0.2.3-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-0.2.4-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![by Chuluu](https://img.shields.io/badge/by-Chuluu-0E5E43)](https://github.com/ChuluuMGL)
 [![Workflow](https://img.shields.io/badge/workflow-adaptive--composite-purple)](./references/visual-routes.md)
@@ -42,11 +42,23 @@ The Skill can also be called by a content-production workflow after the writing 
 
 These are actual generated outputs from the earlier Website Skill and Content Creation Skill tests. The [generated cross-platform demos](./demo/generated-platform-demos/) cover X, WeChat Official Account, YouTube, and Bilibili; the [P0 multilingual demo](./demo/multilingual-p0-demos/) covers Simplified Chinese, Traditional Chinese, English, Japanese, and Korean. The platform-ratio checks are kept separately in the [technical test pack](./demo/technical-platform-tests/).
 
-![Website Skill cover demo](./demo/previous-cases/website-skill-8-palettes.jpg)
-
 ![Generated cross-platform cover demos](./demo/generated-platform-demos/generated-platform-contact-sheet.jpg)
 
-See the five individual [P0 multilingual cover demos](./demo/multilingual-p0-demos/).
+### P0 multilingual cover set
+
+These five are independent cover images, not a language chart or palette sheet:
+
+<table>
+  <tr>
+    <td><img src="./demo/multilingual-p0-demos/zh-hans-content-creation-skill.png" alt="Simplified Chinese cover" width="180"></td>
+    <td><img src="./demo/multilingual-p0-demos/zh-hant-content-creation-skill.png" alt="Traditional Chinese cover" width="180"></td>
+    <td><img src="./demo/multilingual-p0-demos/en-content-creation-skill.png" alt="English cover" width="180"></td>
+    <td><img src="./demo/multilingual-p0-demos/ja-content-creation-skill.png" alt="Japanese cover" width="180"></td>
+    <td><img src="./demo/multilingual-p0-demos/ko-content-creation-skill.png" alt="Korean cover" width="180"></td>
+  </tr>
+</table>
+
+See the [five individual P0 multilingual cover demos](./demo/multilingual-p0-demos/). The earlier palette sheet remains archived under [`demo/previous-cases/`](./demo/previous-cases/), not as the primary Demo.
 
 See the full [Demo Gallery](./demo/README.md).
 
