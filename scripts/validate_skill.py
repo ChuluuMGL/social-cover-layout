@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Small deterministic package check for content-cover-router."""
+"""Small deterministic package check for social-cover-layout."""
 
 from __future__ import annotations
 
@@ -36,18 +36,18 @@ def main() -> int:
             fail(f"missing required file: {relative}")
 
     skill = (ROOT / "SKILL.md").read_text(encoding="utf-8")
-    if not skill.startswith("---\n") or "name: content-cover-router" not in skill:
+    if not skill.startswith("---\n") or "name: social-cover-layout" not in skill:
         fail("SKILL.md frontmatter is missing or has the wrong name")
     for marker in ("adaptive-composite", "generation_mode", "quality-gate"):
         if marker not in skill:
             fail(f"SKILL.md is missing marker: {marker}")
 
     metadata = json.loads((ROOT / "skill.json").read_text(encoding="utf-8"))
-    if metadata.get("name") != "content-cover-router":
+    if metadata.get("name") != "social-cover-layout":
         fail("skill.json name mismatch")
     if metadata.get("license") != "MIT":
         fail("skill.json must declare MIT")
-    if metadata.get("repository") != "https://github.com/ChuluuMGL/content-cover-router":
+    if metadata.get("repository") != "https://github.com/ChuluuMGL/social-cover-layout":
         fail("skill.json repository mismatch")
 
     for readme in (ROOT / "README.md", ROOT / "README.zh-CN.md"):

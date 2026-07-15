@@ -1,4 +1,4 @@
-# Content Cover Router Quality Gate
+# Social Cover Layout Quality Gate
 
 ## P0 必须通过
 

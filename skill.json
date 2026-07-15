@@ -1,7 +1,7 @@
 {
-  "name": "content-cover-router",
-  "display_name": "Content Cover Router",
-  "description": "Route finished content briefs into original, platform-aware social covers with adaptive-composite visual systems, color tokens, layered typography, and a quality gate.",
+  "name": "social-cover-layout",
+  "display_name": "Social Cover Layout",
+  "description": "Turn finished content briefs into original, platform-aware social covers with adaptive-composite visual systems, color tokens, layered typography, and a quality gate.",
   "version": "0.1.0",
   "author": "Chuluu",
   "copyright": "Copyright (c) 2026 Chuluu",
@@ -15,9 +15,10 @@
     "url": "https://github.com/ChuluuMGL"
   },
   "license": "MIT",
-  "repository": "https://github.com/ChuluuMGL/content-cover-router",
+  "repository": "https://github.com/ChuluuMGL/social-cover-layout",
   "homepage": "https://github.com/ChuluuMGL",
   "category": "Social Media Design",
+  "legacy_name": "content-cover-router",
   "keywords": [
     "social cover",
     "content cover",

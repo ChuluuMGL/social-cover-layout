@@ -1,4 +1,4 @@
-# Content Cover Router
+# Social Cover Layout
 
 > **面向 AI Agent 的社交媒体封面 Skill**  
 > 把已经完成的内容 brief 路由成适配小红书、X/Twitter、YouTube、微信公众号及其他媒体表面的原创封面方案或生成封面。
@@ -7,26 +7,26 @@
 
 [English](README.md) | 中文说明
 
-[![AI Skill](https://img.shields.io/badge/AI%20Skill-content--cover--router-0E5E43)](./SKILL.md)
+[![AI Skill](https://img.shields.io/badge/AI%20Skill-social--cover--layout-0E5E43)](./SKILL.md)
 [![Version](https://img.shields.io/badge/version-0.1.0-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![by Chuluu](https://img.shields.io/badge/by-Chuluu-0E5E43)](https://github.com/ChuluuMGL)
 [![Workflow](https://img.shields.io/badge/workflow-adaptive--composite-purple)](./references/visual-routes.md)
 [![QA](https://img.shields.io/badge/QA-quality--gate-blue)](./references/quality-gate.md)
 
-[GitHub 仓库](https://github.com/ChuluuMGL/content-cover-router) | [Skill 定义](./SKILL.md) | [视觉路线](./references/visual-routes.md) | [配色系统](./references/color-system.md) | [质量门](./references/quality-gate.md) | [测试矩阵](./TESTING.md) | [发布边界](./PUBLISHING.md)
+[GitHub 仓库](https://github.com/ChuluuMGL/social-cover-layout) | [Skill 定义](./SKILL.md) | [视觉路线](./references/visual-routes.md) | [配色系统](./references/color-system.md) | [质量门](./references/quality-gate.md) | [测试矩阵](./TESTING.md) | [发布边界](./PUBLISHING.md)
 
 ## 3 分钟开始使用
 
 ```bash
-git clone https://github.com/ChuluuMGL/content-cover-router.git
-cd content-cover-router
+git clone https://github.com/ChuluuMGL/social-cover-layout.git
+cd social-cover-layout
 ```
 
 把仓库根目录或 Skill 文件夹放到兼容 Agent Skills 的目录中，然后调用：
 
 ```text
-使用 $content-cover-router，把这篇已经完成的小红书笔记做成 3:4 封面。
+使用 $social-cover-layout，把这篇已经完成的小红书笔记做成 3:4 封面。
 平台：小红书。
 主题：内容创作 Skill。
 标题：内容创作 Skill / 写笔记还能做封面。
@@ -38,7 +38,7 @@ cd content-cover-router
 
 ## 这个 Skill 做什么
 
-`content-cover-router` 把“内容创作”和“封面制作”连接起来，但不负责写正文。它接收完成的内容 brief，再根据媒体平台、内容目的、标题和视觉主体选择封面路线。
+`social-cover-layout` 把“内容创作”和“封面制作”连接起来，但不负责写正文。它接收完成的内容 brief，再根据媒体平台、内容目的、标题和视觉主体选择封面路线。`content-cover-router` 是此前的内部名称和兼容别名。
 
 | 输出 | 内容 |
 |---|---|
@@ -78,7 +78,7 @@ cd content-cover-router
 `content-creation-workflow` 可以在完成标题、正文、评分和平台适配后，把结构化 brief 交给本 Skill。本仓库也可以完全独立调用。
 
 ```yaml
-cover_skill: "content-cover-router"
+cover_skill: "social-cover-layout"
 topic: ""
 purpose: "click | save | tutorial | proof | series-recognition"
 selected_title: ""

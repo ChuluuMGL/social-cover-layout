@@ -1,4 +1,4 @@
-# Content Cover Router
+# Social Cover Layout
 
 > **Platform-aware social cover Skill for AI Agents**  
 > An open-source Agent Skill that turns a finished content brief into an original, platform-adapted cover plan or generated cover for Xiaohongshu, X/Twitter, YouTube, WeChat, and other media surfaces.
@@ -7,20 +7,20 @@
 
 [中文说明](README.zh-CN.md) | English
 
-[![AI Skill](https://img.shields.io/badge/AI%20Skill-content--cover--router-0E5E43)](./SKILL.md)
+[![AI Skill](https://img.shields.io/badge/AI%20Skill-social--cover--layout-0E5E43)](./SKILL.md)
 [![Version](https://img.shields.io/badge/version-0.1.0-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![by Chuluu](https://img.shields.io/badge/by-Chuluu-0E5E43)](https://github.com/ChuluuMGL)
 [![Workflow](https://img.shields.io/badge/workflow-adaptive--composite-purple)](./references/visual-routes.md)
 [![QA](https://img.shields.io/badge/QA-quality--gate-blue)](./references/quality-gate.md)
 
-[GitHub Repository](https://github.com/ChuluuMGL/content-cover-router) | [Skill Definition](./SKILL.md) | [Visual Routes](./references/visual-routes.md) | [Color System](./references/color-system.md) | [Quality Gate](./references/quality-gate.md) | [Testing Matrix](./TESTING.md) | [Publishing Boundary](./PUBLISHING.md)
+[GitHub Repository](https://github.com/ChuluuMGL/social-cover-layout) | [Skill Definition](./SKILL.md) | [Visual Routes](./references/visual-routes.md) | [Color System](./references/color-system.md) | [Quality Gate](./references/quality-gate.md) | [Testing Matrix](./TESTING.md) | [Publishing Boundary](./PUBLISHING.md)
 
 ## 3-Minute Quick Start
 
 ```bash
-git clone https://github.com/ChuluuMGL/content-cover-router.git
-cd content-cover-router
+git clone https://github.com/ChuluuMGL/social-cover-layout.git
+cd social-cover-layout
 ```
 
 Install the folder into a compatible Agent Skills directory, or point your agent at the repository root.
@@ -28,7 +28,7 @@ Install the folder into a compatible Agent Skills directory, or point your agent
 Invoke:
 
 ```text
-Use $content-cover-router to turn this finished Xiaohongshu brief into a 3:4 cover.
+Use $social-cover-layout to turn this finished Xiaohongshu brief into a 3:4 cover.
 Platform: Xiaohongshu.
 Topic: Content Creation Skill.
 Title: 内容创作 Skill / 写笔记还能做封面。
@@ -40,7 +40,7 @@ The Skill can also be called by a content-production workflow after the writing 
 
 ## What This Skill Does
 
-`content-cover-router` keeps content creation and cover production as two connected stages: it does not write the article, but receives a finished brief and routes it into a platform-specific cover system.
+`social-cover-layout` keeps content creation and cover production as two connected stages: it does not write the article, but receives a finished brief and turns it into a platform-specific cover system. `content-cover-router` remains the former internal name and compatibility alias.
 
 | Output | What It Contains |
 |---|---|
@@ -104,7 +104,7 @@ Generated images are separate from the Skill source. Commercial use depends on t
 `content-creation-workflow` may hand off a structured brief after drafting, scoring, revising, and platform adaptation:
 
 ```yaml
-cover_skill: "content-cover-router"
+cover_skill: "social-cover-layout"
 topic: ""
 purpose: "click | save | tutorial | proof | series-recognition"
 selected_title: ""

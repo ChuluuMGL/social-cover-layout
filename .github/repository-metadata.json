@@ -1,7 +1,7 @@
 {
-  "name": "content-cover-router",
+  "name": "social-cover-layout",
   "description": "Platform-aware Agent Skill for original social covers, layered typography, color systems, and quality-gated image generation.",
-  "homepage": "https://github.com/ChuluuMGL/content-cover-router",
+  "homepage": "https://github.com/ChuluuMGL/social-cover-layout",
   "topics": [
     "agent-skills",
     "social-cover",
