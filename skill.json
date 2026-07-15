@@ -1,8 +1,8 @@
 {
   "name": "social-cover-layout",
   "display_name": "Social Cover Layout",
-  "description": "Turn finished content briefs into original, platform-aware social covers with adaptive-composite visual systems, color tokens, layered typography, and a quality gate.",
-  "version": "0.1.0",
+  "description": "Turn finished content briefs into original, platform-aware social covers with adaptive-composite visual systems, locale-aware typography, layered composition, and a quality gate.",
+  "version": "0.2.0",
   "author": "Chuluu",
   "copyright": "Copyright (c) 2026 Chuluu",
   "maintainer": {
@@ -31,6 +31,9 @@
     "linkedin",
     "tiktok",
     "adaptive composite",
+    "multilingual typography",
+    "rtl layout",
+    "controlled typesetting",
     "cover layout",
     "agent skills",
     "codex",
@@ -68,7 +71,8 @@
     "visual_routes": "references/visual-routes.md",
     "color_system": "references/color-system.md",
     "quality_gate": "references/quality-gate.md",
-    "platform_specs": "references/platform-specs.md"
+    "platform_specs": "references/platform-specs.md",
+    "multilingual_typesetting": "references/multilingual-typesetting.md"
   },
   "compatibility": {
     "format": "Agent Skills / SKILL.md",

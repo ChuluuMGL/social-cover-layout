@@ -8,13 +8,13 @@
 [English](README.md) | 中文说明
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-social--cover--layout-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-0.1.0-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-0.2.0-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![by Chuluu](https://img.shields.io/badge/by-Chuluu-0E5E43)](https://github.com/ChuluuMGL)
 [![Workflow](https://img.shields.io/badge/workflow-adaptive--composite-purple)](./references/visual-routes.md)
 [![QA](https://img.shields.io/badge/QA-quality--gate-blue)](./references/quality-gate.md)
 
-[GitHub 仓库](https://github.com/ChuluuMGL/social-cover-layout) | [Demo 图库](./demo/README.md) | [Skill 定义](./SKILL.md) | [平台规格](./references/platform-specs.md) | [视觉路线](./references/visual-routes.md) | [配色系统](./references/color-system.md) | [质量门](./references/quality-gate.md) | [测试矩阵](./TESTING.md) | [发布边界](./PUBLISHING.md)
+[GitHub 仓库](https://github.com/ChuluuMGL/social-cover-layout) | [Demo 图库](./demo/README.md) | [Skill 定义](./SKILL.md) | [平台规格](./references/platform-specs.md) | [多语言排版](./references/multilingual-typesetting.md) | [视觉路线](./references/visual-routes.md) | [配色系统](./references/color-system.md) | [质量门](./references/quality-gate.md) | [测试矩阵](./TESTING.md) | [发布边界](./PUBLISHING.md)
 
 ## 3 分钟开始使用
 
@@ -59,6 +59,7 @@ cd social-cover-layout
 | 配色系统 | 根据内容气质和品牌规则选择亮色、柔和色或双色组合。 |
 | 生成 brief | 可直接交给图片生成能力的提示词、参考素材、平台、比例和标题规则。 |
 | 质检交接 | 可读性、安全区、素材授权、额外文字和层叠关系检查。 |
+| 多语言排版 | 语言、脚本方向、断句、字体覆盖和受控文字渲染模式。 |
 
 ## 典型场景
 
@@ -97,8 +98,15 @@ purpose: "click | save | tutorial | proof | series-recognition"
 selected_title: ""
 hook: ""
 visual_anchor: "person | screenshot | product | laptop | hand | typography | scene"
+language: ""
+locale: ""
+script: ""
+direction: "ltr | rtl | auto"
+text_mode: "controlled-typeset | model-rendered | hybrid"
+font_preferences: []
+break_policy: "locale-default"
 platform: "xiaohongshu | x | youtube | wechat | bilibili | instagram | linkedin | tiktok | other"
-surface: "note-cover | post-image | thumbnail | video-cover | reel-cover | article-cover | share-card | image-ad"
+surface: "note-cover | post-image | thumbnail | shorts-frame | video-cover | reel-cover | article-cover | share-card | profile-cover | image-ad"
 ratio: ""
 generation_mode: "prompt-only | generate"
 ```

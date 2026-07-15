@@ -8,13 +8,13 @@
 [中文说明](README.zh-CN.md) | English
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-social--cover--layout-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-0.1.0-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-0.2.0-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![by Chuluu](https://img.shields.io/badge/by-Chuluu-0E5E43)](https://github.com/ChuluuMGL)
 [![Workflow](https://img.shields.io/badge/workflow-adaptive--composite-purple)](./references/visual-routes.md)
 [![QA](https://img.shields.io/badge/QA-quality--gate-blue)](./references/quality-gate.md)
 
-[GitHub Repository](https://github.com/ChuluuMGL/social-cover-layout) | [Demo Gallery](./demo/README.md) | [Skill Definition](./SKILL.md) | [Platform Specs](./references/platform-specs.md) | [Visual Routes](./references/visual-routes.md) | [Color System](./references/color-system.md) | [Quality Gate](./references/quality-gate.md) | [Testing Matrix](./TESTING.md) | [Publishing Boundary](./PUBLISHING.md)
+[GitHub Repository](https://github.com/ChuluuMGL/social-cover-layout) | [Demo Gallery](./demo/README.md) | [Skill Definition](./SKILL.md) | [Platform Specs](./references/platform-specs.md) | [Multilingual Typesetting](./references/multilingual-typesetting.md) | [Visual Routes](./references/visual-routes.md) | [Color System](./references/color-system.md) | [Quality Gate](./references/quality-gate.md) | [Testing Matrix](./TESTING.md) | [Publishing Boundary](./PUBLISHING.md)
 
 ## 3-Minute Quick Start
 
@@ -61,6 +61,7 @@ See the full [Demo Gallery](./demo/README.md).
 | Color system | Bright, soft, and two-color palettes selected by content mood and brand rules. |
 | Generation brief | A prompt-ready cover specification with references, platform, ratio, title, visual anchor, and manual review items. |
 | QA handoff | Readability, safe-area, asset authorization, extra-text, and layer-depth checks before publishing. |
+| Multilingual typography | Locale, script direction, line-breaking, font coverage, and controlled text-rendering mode. |
 
 ## Use Cases
 
@@ -123,8 +124,15 @@ purpose: "click | save | tutorial | proof | series-recognition"
 selected_title: ""
 hook: ""
 visual_anchor: "person | screenshot | product | laptop | hand | typography | scene"
+language: ""
+locale: ""
+script: ""
+direction: "ltr | rtl | auto"
+text_mode: "controlled-typeset | model-rendered | hybrid"
+font_preferences: []
+break_policy: "locale-default"
 platform: "xiaohongshu | x | youtube | wechat | bilibili | instagram | linkedin | tiktok | other"
-surface: "note-cover | post-image | thumbnail | video-cover | reel-cover | article-cover | share-card | image-ad"
+surface: "note-cover | post-image | thumbnail | shorts-frame | video-cover | reel-cover | article-cover | share-card | profile-cover | image-ad"
 ratio: ""
 generation_mode: "prompt-only | generate"
 ```

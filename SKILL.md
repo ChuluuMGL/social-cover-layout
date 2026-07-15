@@ -33,8 +33,15 @@ purpose: "click | save | tutorial | proof | series-recognition"
 selected_title: ""
 hook: ""
 visual_anchor: "person | screenshot | product | laptop | hand | typography | scene"
+language: ""
+locale: ""
+script: ""
+direction: "ltr | rtl | auto"
+text_mode: "controlled-typeset | model-rendered | hybrid"
+font_preferences: []
+break_policy: "locale-default"
 platform: "xiaohongshu | x | youtube | wechat | bilibili | instagram | linkedin | tiktok | other"
-surface: "note-cover | post-image | thumbnail | video-cover | reel-cover | article-cover | share-card | image-ad"
+surface: "note-cover | post-image | thumbnail | shorts-frame | video-cover | reel-cover | article-cover | share-card | profile-cover | image-ad"
 ratio: ""
 person_reference: []
 asset_references: []
@@ -57,10 +64,12 @@ generation_mode: "prompt-only | generate"
 - 小红书首图：默认 3:4，优先首屏停留和收藏；默认一个主标题、一个主体，不塞正文小字。该比例在本 Skill 中标为工作默认值，发布前以当前上传器为准。
 - X/Twitter organic 帖子图：优先 16:9 或 1:1，一秒理解和转发；不画入 X 的界面按钮。X 广告另走广告比例，不自动复用帖子图。
 - YouTube thumbnail：16:9，标题更短、主体更大、对比更强；不画播放条或平台 UI。
+- YouTube Shorts：只输出 9:16 可选视频帧，不承诺可以上传自定义 Shorts 缩略图。
 - Bilibili 视频封面：默认 16:9；保留底部元数据安全带，并避开右上角重要信息；不能把 YouTube 封面直接换 Logo。
-- 微信公众号/分享图：按 21:9 或 1:1 分别重新构图，不能把小红书图拉伸过去；该比例在本 Skill 中标为工作默认值。
+- 微信公众号文章封面：按约 21:9 重新构图；微信公众号分享卡：按 1:1 重新构图；两者都不能把小红书图拉伸过去，比例在本 Skill 中标为工作默认值。
 - Instagram feed：默认 4:5；Reel cover 走 9:16，并把标题和主体放在中间安全区以应对个人主页裁切。
 - LinkedIn 分享卡：默认 1.91:1；文章封面走超宽版，标题减少、证据优先。
+- LinkedIn 广告：先确认 1.91:1、1:1 或 4:5 placement，再选择画布；不能把分享卡默认当广告图。
 - TikTok：视频封面/竖版素材默认 9:16；它是视频优先平台，不能把静态图广告规格当成统一的普通帖子规则。
 
 ### 3. 进入统一的 adaptive-composite 系统
@@ -76,6 +85,15 @@ generation_mode: "prompt-only | generate"
 统一系统还会选择一个层叠动作：`person-over-type`、`type-over-object` 或 `split-layer`。具体规则见 `references/visual-routes.md`。
 
 `adaptive-composite` 可以从 `references/color-system.md` 选择亮色、柔和色或双色组合。颜色由内容情绪、背景明度和品牌规则决定，不固定使用黄色。
+
+## 多语言排版
+
+`language` 不是装饰性字段。必须同时解析 `locale`、`script`、`direction`、`text_mode` 和 `break_policy`，再决定标题分组、行高、对齐、字体和层叠方向。中文、日文、韩文、阿拉伯文、希伯来文、印地语、泰文等不能共用英文的简单按空格断行规则。
+
+- 默认读取 `references/multilingual-typesetting.md` 的脚本规则。
+- 复杂文字、RTL 文字、品牌名或必须零错字的主标题，默认使用 `controlled-typeset` 或 `hybrid`，不要把最终文字完全交给图片模型。
+- RTL 和混合方向标题必须重新构图，不能把 LTR 成品水平翻转。
+- 没有脚本完整的字体、断句策略或实际缩略图复核时，输出 `manual-review`，不声称“支持该语言”。
 
 ## 人像规则
 
@@ -99,10 +117,10 @@ generation_mode: "prompt-only | generate"
 
 1. 接收 content brief，不重复询问已经提供的信息。
 2. 提炼主标题、视觉主体、证明元素和目标动作。
-3. 根据平台、surface 和内容选择 `adaptive-composite` 的内部优先级、语义换行、关键词变色、层叠动作、颜色 Token 和安全区。
+3. 根据平台、surface、locale 和内容选择 `adaptive-composite` 的内部优先级、语义换行、关键词变色、层叠动作、颜色 Token 和安全区。
 4. 写入任务目录的 `prompts/{case}-{route}-{ratio}.md`。
 5. 用户明确要求出图时，调用当前运行时图片生成能力；没有人像时使用产品/界面/字体主体。
-6. 检查比例、标题可读性、主体安全区、人物/产品完整性和额外文字。
+6. 检查比例、标题可读性、语言断句、字形方向、字体覆盖、主体安全区、人物/产品完整性和额外文字。
 7. 返回路线、提示词路径、图片路径、质检结果和仍需人工确认的授权事项。
 
 ## 商用与原创实现

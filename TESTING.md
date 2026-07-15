@@ -14,6 +14,7 @@ The validator checks:
 - English and Simplified Chinese README sections;
 - required release and publishing documents.
 - `references/platform-specs.md` and its explicit source-status labels.
+- `references/multilingual-typesetting.md` and the locale-aware metadata markers.
 
 ## Visual acceptance matrix
 
@@ -45,4 +46,19 @@ Change one visual variable at a time. A template-composited preview is not evide
 
 ## Cross-platform test case
 
-See [`PLATFORM_TEST_REPORT.md`](./PLATFORM_TEST_REPORT.md) for the `Website Skill / 快速建站` test across Xiaohongshu, X, YouTube, WeChat, Instagram, LinkedIn, and TikTok. The rendered demo assets are published under [`demo/platform-tests/`](./demo/platform-tests/); the deterministic browser harness remains under `output/platform-tests/` and is intentionally ignored from the package.
+See [`PLATFORM_TEST_REPORT.md`](./PLATFORM_TEST_REPORT.md) for the `Website Skill / 快速建站` test across Xiaohongshu, X, YouTube, WeChat, Instagram, LinkedIn, and TikTok. The rendered demo assets are published under [`demo/technical-platform-tests/`](./demo/technical-platform-tests/); the deterministic browser harness remains under `output/platform-tests/` and is intentionally ignored from the package.
+
+## Multilingual regression matrix
+
+This is a text and layout acceptance matrix, not a claim that every language has already been image-model generated:
+
+| Fixture | Required check |
+|---|---|
+| `zh-Hans` / `zh-Hant` | CJK kinsoku punctuation, semantic grouping, no single-glyph drop |
+| `en` / `fr` / `de` / `es` | word-boundary wrapping, hyphenation, diacritics, product-name integrity |
+| `ja` / `ko` | phrase grouping, punctuation, line height, dense headline safety |
+| `ar` / `he` | RTL direction, bidi isolation, mirrored reading order, safe-area recomposition |
+| `hi` | conjunct and grapheme-cluster integrity, line height |
+| `th` | word-aware breaks, tone-mark and glyph integrity |
+
+For `ar`, `he`, `hi`, and `th`, `controlled-typeset` or `hybrid` is the default until a real generated sample has passed the final thumbnail review. Passing Chinese and English alone is not multilingual validation.
