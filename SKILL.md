@@ -33,8 +33,8 @@ purpose: "click | save | tutorial | proof | series-recognition"
 selected_title: ""
 hook: ""
 visual_anchor: "person | screenshot | product | laptop | hand | typography | scene"
-platform: "xiaohongshu | x | youtube | wechat | instagram | linkedin | tiktok | other"
-surface: "note-cover | post-image | thumbnail | reel-cover | article-cover | share-card | image-ad"
+platform: "xiaohongshu | x | youtube | wechat | bilibili | instagram | linkedin | tiktok | other"
+surface: "note-cover | post-image | thumbnail | video-cover | reel-cover | article-cover | share-card | image-ad"
 ratio: ""
 person_reference: []
 asset_references: []
@@ -57,6 +57,7 @@ generation_mode: "prompt-only | generate"
 - 小红书首图：默认 3:4，优先首屏停留和收藏；默认一个主标题、一个主体，不塞正文小字。该比例在本 Skill 中标为工作默认值，发布前以当前上传器为准。
 - X/Twitter organic 帖子图：优先 16:9 或 1:1，一秒理解和转发；不画入 X 的界面按钮。X 广告另走广告比例，不自动复用帖子图。
 - YouTube thumbnail：16:9，标题更短、主体更大、对比更强；不画播放条或平台 UI。
+- Bilibili 视频封面：默认 16:9；保留底部元数据安全带，并避开右上角重要信息；不能把 YouTube 封面直接换 Logo。
 - 微信公众号/分享图：按 21:9 或 1:1 分别重新构图，不能把小红书图拉伸过去；该比例在本 Skill 中标为工作默认值。
 - Instagram feed：默认 4:5；Reel cover 走 9:16，并把标题和主体放在中间安全区以应对个人主页裁切。
 - LinkedIn 分享卡：默认 1.91:1；文章封面走超宽版，标题减少、证据优先。
