@@ -40,9 +40,11 @@ The Skill can also be called by a content-production workflow after the writing 
 
 ## Demo Preview
 
-These are actual generated outputs from the earlier Website Skill and Content Creation Skill tests. The platform-ratio checks are kept separately in the [technical test pack](./demo/technical-platform-tests/).
+These are actual generated outputs from the earlier Website Skill and Content Creation Skill tests. The new [generated cross-platform demos](./demo/generated-platform-demos/) cover X, WeChat Official Account, YouTube, and Bilibili. The platform-ratio checks are kept separately in the [technical test pack](./demo/technical-platform-tests/).
 
 ![Website Skill cover demo](./demo/previous-cases/website-skill-10-palettes.jpg)
+
+![Generated cross-platform cover demos](./demo/generated-platform-demos/generated-platform-contact-sheet.jpg)
 
 See the full [Demo Gallery](./demo/README.md).
 
@@ -52,7 +54,7 @@ See the full [Demo Gallery](./demo/README.md).
 
 | Output | What It Contains |
 |---|---|
-| Platform route | Surface, ratio, safe area, and thumbnail priority for Xiaohongshu, X/Twitter, YouTube, WeChat, or another media surface. |
+| Platform route | Surface, ratio, safe area, and thumbnail priority for Xiaohongshu, X/Twitter, YouTube, WeChat, Bilibili, or another media surface. |
 | Visual route | `headline-first`, `proof-first`, or `bridge-hybrid` inside one `adaptive-composite` system. |
 | Title system | Semantic line breaks, two-group maximum, keyword color emphasis, stable baselines, and no accidental single-character drops. |
 | Layer system | Background, type-and-proof, and foreground layers with explainable person/type/object overlap. |
@@ -121,8 +123,8 @@ purpose: "click | save | tutorial | proof | series-recognition"
 selected_title: ""
 hook: ""
 visual_anchor: "person | screenshot | product | laptop | hand | typography | scene"
-platform: "xiaohongshu | x | youtube | wechat | instagram | linkedin | tiktok | other"
-surface: "note-cover | post-image | thumbnail | reel-cover | article-cover | share-card | image-ad"
+platform: "xiaohongshu | x | youtube | wechat | bilibili | instagram | linkedin | tiktok | other"
+surface: "note-cover | post-image | thumbnail | video-cover | reel-cover | article-cover | share-card | image-ad"
 ratio: ""
 generation_mode: "prompt-only | generate"
 ```

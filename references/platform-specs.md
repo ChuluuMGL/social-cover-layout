@@ -16,6 +16,7 @@ The `source_status` values are explicit:
 | X/Twitter | organic post image | 16:9 or 1:1 | 1200×675 or 1200×1200 | verified-official | one-second comprehension, no X UI |
 | X/Twitter | image ad | 1.91:1, 1:1, 4:5, 2:3, 16:9, 9:16 | 1200×628, 1200×1200, 1440×1800, 1080×1620, 1920×1080, 1080×1920 | verified-official | choose one ad placement before composing |
 | YouTube | video thumbnail | 16:9 | 3840×2160; 1280×720 fallback | verified-official | very short title, largest subject, high contrast |
+| Bilibili | video cover | 16:9 | 1280×720 working canvas | surface-dependent | keep bottom metadata band quiet; keep top-right safe |
 | WeChat | article/share card | about 21:9 or 1:1 | 900×383 or 900×900 | working-default | recompose into a narrow band or square; never stretch XHS |
 | Instagram | feed post | 1.91:1–3:4 | 1080×1350 default | verified-official | keep text inside feed-safe center; 4:5 is the practical default |
 | Instagram | Reel cover | 9:16 | 1080×1920 | verified-official | center-safe title because profile/grid crops can differ |
@@ -27,6 +28,7 @@ The `source_status` values are explicit:
 
 - **X/Twitter organic post:** X Help says a single photo with a standard aspect ratio between 2:1 and 3:4 displays in full. X ad specifications are a separate surface and support more placements, so the Skill must not reuse ad dimensions for an organic post automatically.
 - **YouTube:** the current YouTube Help page recommends 3840×2160 and 16:9, with a minimum width of 640. The 1280×720 version remains a useful lower-cost fallback when an image model or export pipeline cannot produce 4K.
+- **Bilibili:** a current Bilibili creator-training PDF recommends 1147×717 for a video cover, with a quiet bottom 120px area and a top-right safe area. The generated demo uses a 1280×720 working canvas while preserving those relative safe zones; confirm the current uploader before publishing.
 - **Instagram:** Meta documents a width up to 1080 and a supported range from 1.91:1 to 3:4 for feed images. Reels promotion is a separate full-screen 9:16 surface.
 - **LinkedIn:** LinkedIn documents 1200×627 for website sharing previews and 2000×600 as the optimal article-cover size. Ads have additional square and 4:5 variants.
 - **TikTok:** TikTok's current image-ad documentation includes 720×1280 vertical creatives; the organic product is primarily video-first, so this Skill treats 9:16 as a video-cover default rather than claiming a universal static-post rule.
@@ -47,5 +49,6 @@ The `source_status` values are explicit:
 - Instagram image resolution: https://www.facebook.com/help/1631821640426723
 - LinkedIn website sharing: https://www.linkedin.com/help/linkedin/answer/a521928/making-your-website-shareable-on-linkedin?lang=en
 - LinkedIn single-image ads: https://www.linkedin.com/help/lms/answer/a426534
+- Bilibili creator training cover guidance: https://activity.hdslb.com/blackboard/static/20220506/c74857cd3d199e15a1fbada58d8a9a44/PSTScCKhoW.pdf
 - Xiaohongshu open-platform product images: https://school.xiaohongshu.com/en/open/product/create-spl.html
 - TikTok image and carousel ad playbook: https://ads.tiktok.com/business/library/Image_Ads_Carousel_Ads_Playbook.pdf

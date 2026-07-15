@@ -2,6 +2,12 @@
 
 These are the actual generated outputs from the cover tests that led to the current `social-cover-layout` rules. They are the primary demo; the platform specification checks are listed separately below.
 
+## Generated cross-platform demos
+
+The [generated platform demo pack](./generated-platform-demos/) contains independent image-model generations for X, WeChat Official Account, YouTube, and Bilibili.
+
+![Generated cross-platform demos](./generated-platform-demos/generated-platform-contact-sheet.jpg)
+
 ## Featured generated outputs
 
 ![Website Skill palette demo](./previous-cases/website-skill-10-palettes.jpg)
