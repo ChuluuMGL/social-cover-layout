@@ -1,0 +1,73 @@
+{
+  "name": "content-cover-router",
+  "display_name": "Content Cover Router",
+  "description": "Route finished content briefs into original, platform-aware social covers with adaptive-composite visual systems, color tokens, layered typography, and a quality gate.",
+  "version": "0.1.0",
+  "author": "Chuluu",
+  "copyright": "Copyright (c) 2026 Chuluu",
+  "maintainer": {
+    "name": "ChuluuMGL",
+    "github": "https://github.com/ChuluuMGL"
+  },
+  "organization": {
+    "name": "Chuluu",
+    "alternate_name": "ChuluuMGL",
+    "url": "https://github.com/ChuluuMGL"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/ChuluuMGL/content-cover-router",
+  "homepage": "https://github.com/ChuluuMGL",
+  "category": "Social Media Design",
+  "keywords": [
+    "social cover",
+    "content cover",
+    "xiaohongshu",
+    "x twitter",
+    "youtube thumbnail",
+    "wechat",
+    "adaptive composite",
+    "cover layout",
+    "agent skills",
+    "codex",
+    "chuluu"
+  ],
+  "routes": [
+    "headline-first",
+    "proof-first",
+    "bridge-hybrid",
+    "person-over-type",
+    "type-over-object",
+    "split-layer"
+  ],
+  "platforms": [
+    "xiaohongshu",
+    "x",
+    "youtube",
+    "wechat",
+    "other"
+  ],
+  "outputs": [
+    "Platform route",
+    "Visual route",
+    "Title and color system",
+    "Layered cover prompt",
+    "Generated cover when requested",
+    "Quality gate",
+    "Manual review list"
+  ],
+  "references": {
+    "visual_routes": "references/visual-routes.md",
+    "color_system": "references/color-system.md",
+    "quality_gate": "references/quality-gate.md"
+  },
+  "compatibility": {
+    "format": "Agent Skills / SKILL.md",
+    "tested": ["Codex"],
+    "expected": ["Claude Code", "Cursor", "OpenClaw", "Hermes", "other SKILL.md-compatible agent runtimes"]
+  },
+  "not_for": [
+    "automatic platform publishing",
+    "credential, cookie, token, or API-key management",
+    "copying third-party cover templates, text, images, or brand assets"
+  ]
+}

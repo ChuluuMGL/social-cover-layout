@@ -1,0 +1,7 @@
+interface:
+  display_name: "Content Cover Router"
+  short_description: "Route content briefs into platform-aware social covers"
+  default_prompt: "Use $content-cover-router to turn this finished content brief into an original, platform-ready cover plan or generated cover."
+
+policy:
+  allow_implicit_invocation: true

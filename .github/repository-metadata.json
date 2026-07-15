@@ -1,0 +1,20 @@
+{
+  "name": "content-cover-router",
+  "description": "Platform-aware Agent Skill for original social covers, layered typography, color systems, and quality-gated image generation.",
+  "homepage": "https://github.com/ChuluuMGL/content-cover-router",
+  "topics": [
+    "agent-skills",
+    "social-cover",
+    "content-cover",
+    "cover-layout",
+    "xiaohongshu",
+    "twitter",
+    "youtube-thumbnail",
+    "wechat",
+    "codex",
+    "skill-md",
+    "chuluu"
+  ],
+  "license": "MIT",
+  "visibility": "public"
+}
