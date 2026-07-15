@@ -45,4 +45,4 @@ Change one visual variable at a time. A template-composited preview is not evide
 
 ## Cross-platform test case
 
-See [`PLATFORM_TEST_REPORT.md`](./PLATFORM_TEST_REPORT.md) for the `Website Skill / 快速建站` test across Xiaohongshu, X, YouTube, WeChat, Instagram, LinkedIn, and TikTok. The local PNGs and deterministic browser harness are kept under `output/platform-tests/` and are intentionally ignored from the package.
+See [`PLATFORM_TEST_REPORT.md`](./PLATFORM_TEST_REPORT.md) for the `Website Skill / 快速建站` test across Xiaohongshu, X, YouTube, WeChat, Instagram, LinkedIn, and TikTok. The rendered demo assets are published under [`demo/platform-tests/`](./demo/platform-tests/); the deterministic browser harness remains under `output/platform-tests/` and is intentionally ignored from the package.

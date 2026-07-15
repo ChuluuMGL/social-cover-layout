@@ -14,7 +14,7 @@
 [![Workflow](https://img.shields.io/badge/workflow-adaptive--composite-purple)](./references/visual-routes.md)
 [![QA](https://img.shields.io/badge/QA-quality--gate-blue)](./references/quality-gate.md)
 
-[GitHub Repository](https://github.com/ChuluuMGL/social-cover-layout) | [Skill Definition](./SKILL.md) | [Platform Specs](./references/platform-specs.md) | [Visual Routes](./references/visual-routes.md) | [Color System](./references/color-system.md) | [Quality Gate](./references/quality-gate.md) | [Testing Matrix](./TESTING.md) | [Publishing Boundary](./PUBLISHING.md)
+[GitHub Repository](https://github.com/ChuluuMGL/social-cover-layout) | [Demo Gallery](./demo/README.md) | [Skill Definition](./SKILL.md) | [Platform Specs](./references/platform-specs.md) | [Visual Routes](./references/visual-routes.md) | [Color System](./references/color-system.md) | [Quality Gate](./references/quality-gate.md) | [Testing Matrix](./TESTING.md) | [Publishing Boundary](./PUBLISHING.md)
 
 ## 3-Minute Quick Start
 

@@ -14,7 +14,7 @@
 [![Workflow](https://img.shields.io/badge/workflow-adaptive--composite-purple)](./references/visual-routes.md)
 [![QA](https://img.shields.io/badge/QA-quality--gate-blue)](./references/quality-gate.md)
 
-[GitHub 仓库](https://github.com/ChuluuMGL/social-cover-layout) | [Skill 定义](./SKILL.md) | [平台规格](./references/platform-specs.md) | [视觉路线](./references/visual-routes.md) | [配色系统](./references/color-system.md) | [质量门](./references/quality-gate.md) | [测试矩阵](./TESTING.md) | [发布边界](./PUBLISHING.md)
+[GitHub 仓库](https://github.com/ChuluuMGL/social-cover-layout) | [Demo 图库](./demo/README.md) | [Skill 定义](./SKILL.md) | [平台规格](./references/platform-specs.md) | [视觉路线](./references/visual-routes.md) | [配色系统](./references/color-system.md) | [质量门](./references/quality-gate.md) | [测试矩阵](./TESTING.md) | [发布边界](./PUBLISHING.md)
 
 ## 3 分钟开始使用
 
