@@ -36,6 +36,14 @@ cd social-cover-layout
 
 它也可以由内容创作流程在正文完成后，通过结构化 brief 调用。
 
+## Demo 样张
+
+下面是之前 Website Skill 和 Content Creation Skill 测试中实际生成的封面。平台尺寸和安全区测试单独放在[技术测试包](./demo/technical-platform-tests/)中，不作为主视觉 Demo。
+
+![Website Skill 封面 Demo](./demo/previous-cases/website-skill-10-palettes.jpg)
+
+完整内容见[Demo 图库](./demo/README.md)。
+
 ## 这个 Skill 做什么
 
 `social-cover-layout` 把“内容创作”和“封面制作”连接起来，但不负责写正文。它接收完成的内容 brief，再根据媒体平台、内容目的、标题和视觉主体选择封面路线。`content-cover-router` 是此前的内部名称和兼容别名。

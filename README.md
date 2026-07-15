@@ -38,6 +38,14 @@ Generation mode: generate.
 
 The Skill can also be called by a content-production workflow after the writing brief is complete.
 
+## Demo Preview
+
+These are actual generated outputs from the earlier Website Skill and Content Creation Skill tests. The platform-ratio checks are kept separately in the [technical test pack](./demo/technical-platform-tests/).
+
+![Website Skill cover demo](./demo/previous-cases/website-skill-10-palettes.jpg)
+
+See the full [Demo Gallery](./demo/README.md).
+
 ## What This Skill Does
 
 `social-cover-layout` keeps content creation and cover production as two connected stages: it does not write the article, but receives a finished brief and turns it into a platform-specific cover system. `content-cover-router` remains the former internal name and compatibility alias.
