@@ -5,6 +5,12 @@
 - Renamed the public Skill and repository identity from `content-cover-router` to `social-cover-layout`.
 - Kept `content-cover-router` as a legacy/internal compatibility name in the documentation and metadata.
 
+## 0.2.4 — 2026-07-15
+
+- Promoted the five independent multilingual cover images to the repository homepage and Demo Gallery first view.
+- Removed the old palette sheet from the primary Demo position; it remains archived as a historical comparison.
+- Added direct visual links so the updated Demo is visible without opening a nested folder.
+
 ## 0.2.3 — 2026-07-15
 
 - Replaced the multilingual card-sheet specimen with five independent cover images.

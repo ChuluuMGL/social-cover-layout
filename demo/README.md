@@ -12,11 +12,21 @@ The [generated platform demo pack](./generated-platform-demos/) contains indepen
 
 The [P0 multilingual demo](./multilingual-p0-demos/) now contains five independent cover images for Simplified Chinese, Traditional Chinese, English, Japanese, and Korean. Each one keeps the proven cover composition and changes only the language brief and supporting palette; it is not a five-language card sheet.
 
-## Featured generated outputs
+## Featured cover outputs
 
-![Website Skill palette demo](./previous-cases/website-skill-8-palettes.jpg)
+The primary multilingual examples are five independent cover images, each with the same bold composition and a different language/palette pairing:
 
-The palette sheet above is the earlier Website Skill generation test after removing the two low-clarity variants (`Coral Cream` and `Deep Blue Lime`). The two single-cover cases below are the original generated outputs used during the adaptive-composite comparison:
+<table>
+  <tr>
+    <td><img src="./multilingual-p0-demos/zh-hans-content-creation-skill.png" alt="Simplified Chinese cover" width="170"></td>
+    <td><img src="./multilingual-p0-demos/zh-hant-content-creation-skill.png" alt="Traditional Chinese cover" width="170"></td>
+    <td><img src="./multilingual-p0-demos/en-content-creation-skill.png" alt="English cover" width="170"></td>
+    <td><img src="./multilingual-p0-demos/ja-content-creation-skill.png" alt="Japanese cover" width="170"></td>
+    <td><img src="./multilingual-p0-demos/ko-content-creation-skill.png" alt="Korean cover" width="170"></td>
+  </tr>
+</table>
+
+The earlier palette sheet is archived as a historical comparison, not the primary Demo. The two original single-cover cases remain available for the adaptive-composite comparison:
 
 - [Website Skill — sunny yellow](./previous-cases/website-skill-sunny-yellow.png)
 - [Content Creation Skill — actual adaptive-composite test](./previous-cases/content-creation-skill-yellow.png)
