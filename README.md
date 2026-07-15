@@ -42,7 +42,7 @@ The Skill can also be called by a content-production workflow after the writing 
 
 These are actual generated outputs from the earlier Website Skill and Content Creation Skill tests. The new [generated cross-platform demos](./demo/generated-platform-demos/) cover X, WeChat Official Account, YouTube, and Bilibili. The platform-ratio checks are kept separately in the [technical test pack](./demo/technical-platform-tests/).
 
-![Website Skill cover demo](./demo/previous-cases/website-skill-10-palettes.jpg)
+![Website Skill cover demo](./demo/previous-cases/website-skill-8-palettes.jpg)
 
 ![Generated cross-platform cover demos](./demo/generated-platform-demos/generated-platform-contact-sheet.jpg)
 

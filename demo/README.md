@@ -10,9 +10,9 @@ The [generated platform demo pack](./generated-platform-demos/) contains indepen
 
 ## Featured generated outputs
 
-![Website Skill palette demo](./previous-cases/website-skill-10-palettes.jpg)
+![Website Skill palette demo](./previous-cases/website-skill-8-palettes.jpg)
 
-The palette sheet above is the earlier Website Skill generation test. The two single-cover cases below are the original generated outputs used during the adaptive-composite comparison:
+The palette sheet above is the earlier Website Skill generation test after removing the two low-clarity variants (`Coral Cream` and `Deep Blue Lime`). The two single-cover cases below are the original generated outputs used during the adaptive-composite comparison:
 
 - [Website Skill — sunny yellow](./previous-cases/website-skill-sunny-yellow.png)
 - [Content Creation Skill — actual adaptive-composite test](./previous-cases/content-creation-skill-yellow.png)
