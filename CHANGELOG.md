@@ -5,6 +5,13 @@
 - Renamed the public Skill and repository identity from `content-cover-router` to `social-cover-layout`.
 - Kept `content-cover-router` as a legacy/internal compatibility name in the documentation and metadata.
 
+## 0.2.2 — 2026-07-15
+
+- Added a platform demo gallery for X, WeChat Official Account, YouTube, and Bilibili outputs.
+- Added a P0 multilingual typography gallery for Simplified Chinese, Traditional Chinese, English, Japanese, and Korean.
+- Separated generated platform demos from controlled-typeset language QA specimens so the evidence type is clear.
+- Used varied accent colors across the cases without turning the gallery into a palette-only showcase.
+
 ## 0.2.1 — 2026-07-15
 
 - Narrowed the validated language regression set to the five P0 languages: Simplified Chinese, Traditional Chinese, English, Japanese, and Korean.
