@@ -8,7 +8,7 @@
 [中文说明](README.zh-CN.md) | English
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-social--cover--layout-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-0.2.0-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-0.2.1-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![by Chuluu](https://img.shields.io/badge/by-Chuluu-0E5E43)](https://github.com/ChuluuMGL)
 [![Workflow](https://img.shields.io/badge/workflow-adaptive--composite-purple)](./references/visual-routes.md)
@@ -58,10 +58,11 @@ See the full [Demo Gallery](./demo/README.md).
 | Visual route | `headline-first`, `proof-first`, or `bridge-hybrid` inside one `adaptive-composite` system. |
 | Title system | Semantic line breaks, two-group maximum, keyword color emphasis, stable baselines, and no accidental single-character drops. |
 | Layer system | Background, type-and-proof, and foreground layers with explainable person/type/object overlap. |
+| Canvas families | `vertical`, `wide`, and `square` composition constraints reused across platform ratios; no template explosion. |
 | Color system | Bright, soft, and two-color palettes selected by content mood and brand rules. |
 | Generation brief | A prompt-ready cover specification with references, platform, ratio, title, visual anchor, and manual review items. |
 | QA handoff | Readability, safe-area, asset authorization, extra-text, and layer-depth checks before publishing. |
-| Multilingual typography | Locale, script direction, line-breaking, font coverage, and controlled text-rendering mode. |
+| Multilingual typography | P0 coverage for Simplified Chinese, Traditional Chinese, English, Japanese, and Korean; other languages require manual review. |
 
 ## Use Cases
 
@@ -134,6 +135,7 @@ break_policy: "locale-default"
 platform: "xiaohongshu | x | youtube | wechat | bilibili | instagram | linkedin | tiktok | other"
 surface: "note-cover | post-image | thumbnail | shorts-frame | video-cover | reel-cover | article-cover | share-card | profile-cover | image-ad"
 ratio: ""
+layout_family: "vertical | wide | square | auto"
 generation_mode: "prompt-only | generate"
 ```
 
@@ -144,7 +146,7 @@ The handoff is optional. This repository remains usable as a standalone Skill.
 Before a cover is treated as ready, check:
 
 - Correct platform ratio and delivery surface.
-- Main title readable at thumbnail size with no wrong characters or unrequested text.
+- Main title and visual anchor remain recognizable at a lightweight 25% thumbnail preview, with no wrong characters or unrequested text.
 - Face, hands, product, evidence, and title inside the safe area.
 - No unauthorized person, logo, screenshot, font, watermark, or third-party brand.
 - No accidental character drop, floating glyph, or random line break.

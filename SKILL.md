@@ -43,6 +43,7 @@ break_policy: "locale-default"
 platform: "xiaohongshu | x | youtube | wechat | bilibili | instagram | linkedin | tiktok | other"
 surface: "note-cover | post-image | thumbnail | shorts-frame | video-cover | reel-cover | article-cover | share-card | profile-cover | image-ad"
 ratio: ""
+layout_family: "vertical | wide | square | auto"
 person_reference: []
 asset_references: []
 brand_rules: ""
@@ -88,11 +89,11 @@ generation_mode: "prompt-only | generate"
 
 ## 多语言排版
 
-`language` 不是装饰性字段。必须同时解析 `locale`、`script`、`direction`、`text_mode` 和 `break_policy`，再决定标题分组、行高、对齐、字体和层叠方向。中文、日文、韩文、阿拉伯文、希伯来文、印地语、泰文等不能共用英文的简单按空格断行规则。
+`language` 不是装饰性字段。当前版本只对简体中文、繁体中文、英文、日文和韩文做 P0 回归；必须同时解析 `locale`、`script`、`direction`、`text_mode` 和 `break_policy`，再决定标题分组、行高、对齐、字体和层叠方向。西语、俄语、阿拉伯语和其他语言暂不纳入已验证支持范围，输出时必须标记 `manual-review`。
 
 - 默认读取 `references/multilingual-typesetting.md` 的脚本规则。
-- 复杂文字、RTL 文字、品牌名或必须零错字的主标题，默认使用 `controlled-typeset` 或 `hybrid`，不要把最终文字完全交给图片模型。
-- RTL 和混合方向标题必须重新构图，不能把 LTR 成品水平翻转。
+- P0 语言的品牌名或必须零错字的主标题，默认使用 `controlled-typeset` 或 `hybrid`，不要把最终文字完全交给图片模型。
+- RTL、混合方向或非 P0 标题必须重新构图并进入 `manual-review`，不能把 LTR 成品水平翻转后声称已支持。
 - 没有脚本完整的字体、断句策略或实际缩略图复核时，输出 `manual-review`，不声称“支持该语言”。
 
 ## 人像规则
@@ -117,7 +118,7 @@ generation_mode: "prompt-only | generate"
 
 1. 接收 content brief，不重复询问已经提供的信息。
 2. 提炼主标题、视觉主体、证明元素和目标动作。
-3. 根据平台、surface、locale 和内容选择 `adaptive-composite` 的内部优先级、语义换行、关键词变色、层叠动作、颜色 Token 和安全区。
+3. 根据平台、surface、ratio 和内容先确定 `layout_family`（`vertical`、`wide` 或 `square`），再选择 `adaptive-composite` 的内部优先级、语义换行、关键词变色、层叠动作、颜色 Token 和安全区。
 4. 写入任务目录的 `prompts/{case}-{route}-{ratio}.md`。
 5. 用户明确要求出图时，调用当前运行时图片生成能力；没有人像时使用产品/界面/字体主体。
 6. 检查比例、标题可读性、语言断句、字形方向、字体覆盖、主体安全区、人物/产品完整性和额外文字。

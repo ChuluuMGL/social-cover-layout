@@ -18,7 +18,7 @@ The validator checks:
 
 ## Visual acceptance matrix
 
-Each generated cover should be reviewed at full size and at phone-thumbnail size.
+Each generated cover should be reviewed at full size and at a lightweight 25% phone-thumbnail preview.
 
 | Dimension | Pass condition |
 |---|---|
@@ -50,15 +50,25 @@ See [`PLATFORM_TEST_REPORT.md`](./PLATFORM_TEST_REPORT.md) for the `Website Skil
 
 ## Multilingual regression matrix
 
-This is a text and layout acceptance matrix, not a claim that every language has already been image-model generated:
+This is a focused P0 text and layout acceptance matrix, not a claim that every language has already been image-model generated:
 
 | Fixture | Required check |
 |---|---|
 | `zh-Hans` / `zh-Hant` | CJK kinsoku punctuation, semantic grouping, no single-glyph drop |
-| `en` / `fr` / `de` / `es` | word-boundary wrapping, hyphenation, diacritics, product-name integrity |
+| `en` | word-boundary wrapping, product-name integrity, URL and number integrity |
 | `ja` / `ko` | phrase grouping, punctuation, line height, dense headline safety |
-| `ar` / `he` | RTL direction, bidi isolation, mirrored reading order, safe-area recomposition |
-| `hi` | conjunct and grapheme-cluster integrity, line height |
-| `th` | word-aware breaks, tone-mark and glyph integrity |
+| Non-P0 (`es`, `ru`, `ar`, and others) | no current regression claim; route to explicit `manual-review` |
 
-For `ar`, `he`, `hi`, and `th`, `controlled-typeset` or `hybrid` is the default until a real generated sample has passed the final thumbnail review. Passing Chinese and English alone is not multilingual validation.
+All five P0 languages use `controlled-typeset` or `hybrid` for production titles. Passing one P0 language does not imply support for the other four, and non-P0 output must not be described as validated support.
+
+## Canvas-family smoke check
+
+Run one representative composition per family rather than every platform × template combination:
+
+| Family | Representative ratios | Check |
+|---|---|---|
+| `vertical` | 3:4 or 9:16 | title remains dominant and central-safe |
+| `wide` | 16:9 | title stays short and evidence remains visible at a glance |
+| `square` | 1:1 | title and evidence form two stable blocks without corner clutter |
+
+These are composition checks, not additional visual templates.
