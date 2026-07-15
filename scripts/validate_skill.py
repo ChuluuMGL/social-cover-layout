@@ -39,7 +39,7 @@ def main() -> int:
     skill = (ROOT / "SKILL.md").read_text(encoding="utf-8")
     if not skill.startswith("---\n") or "name: social-cover-layout" not in skill:
         fail("SKILL.md frontmatter is missing or has the wrong name")
-    for marker in ("adaptive-composite", "generation_mode", "quality-gate", "text_mode", "locale"):
+    for marker in ("adaptive-composite", "generation_mode", "quality-gate", "text_mode", "locale", "layout_family"):
         if marker not in skill:
             fail(f"SKILL.md is missing marker: {marker}")
 

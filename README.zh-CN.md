@@ -8,7 +8,7 @@
 [English](README.md) | 中文说明
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-social--cover--layout-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-0.2.0-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-0.2.1-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![by Chuluu](https://img.shields.io/badge/by-Chuluu-0E5E43)](https://github.com/ChuluuMGL)
 [![Workflow](https://img.shields.io/badge/workflow-adaptive--composite-purple)](./references/visual-routes.md)
@@ -56,10 +56,11 @@ cd social-cover-layout
 | 视觉路线 | 一个统一 `adaptive-composite` 系统中的 `headline-first`、`proof-first` 或 `bridge-hybrid`。 |
 | 标题系统 | 语义换行、最多两组主视觉文字、关键词变色、稳定基线，避免单字下坠。 |
 | 层叠系统 | 背景、文字/证据、前景三层，以及可解释的人物/文字/道具关系。 |
+| 画布家族 | `vertical`、`wide`、`square` 三类构图约束，复用同一套视觉系统，不增加模板数量。 |
 | 配色系统 | 根据内容气质和品牌规则选择亮色、柔和色或双色组合。 |
 | 生成 brief | 可直接交给图片生成能力的提示词、参考素材、平台、比例和标题规则。 |
 | 质检交接 | 可读性、安全区、素材授权、额外文字和层叠关系检查。 |
-| 多语言排版 | 语言、脚本方向、断句、字体覆盖和受控文字渲染模式。 |
+| 多语言排版 | 当前 P0 支持简体中文、繁体中文、英文、日文和韩文；其他语言进入人工复核。 |
 
 ## 典型场景
 
@@ -108,13 +109,14 @@ break_policy: "locale-default"
 platform: "xiaohongshu | x | youtube | wechat | bilibili | instagram | linkedin | tiktok | other"
 surface: "note-cover | post-image | thumbnail | shorts-frame | video-cover | reel-cover | article-cover | share-card | profile-cover | image-ad"
 ratio: ""
+layout_family: "vertical | wide | square | auto"
 generation_mode: "prompt-only | generate"
 ```
 
 ## 质量门
 
 - 平台比例和交付 surface 正确。
-- 主标题在手机缩略图中可读，没有错字、乱码或未要求的额外文字。
+- 在轻量 25% 手机缩略图预览中，主标题和视觉主体仍可识别，没有错字、乱码或未要求的额外文字。
 - 标题、人物脸、手势、产品和证据都在安全区内。
 - 没有未经授权的真人、Logo、截图、字体、水印或第三方品牌。
 - 没有单字下坠、漂浮、随机断行或用文字自身错位制造层叠。
