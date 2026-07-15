@@ -40,7 +40,7 @@ cd social-cover-layout
 
 下面是之前 Website Skill 和 Content Creation Skill 测试中实际生成的封面；新的[跨平台生成 Demo](./demo/generated-platform-demos/)包含 X、微信公众号、YouTube 和 B 站版本。平台尺寸和安全区测试单独放在[技术测试包](./demo/technical-platform-tests/)中，不作为主视觉 Demo。
 
-![Website Skill 封面 Demo](./demo/previous-cases/website-skill-10-palettes.jpg)
+![Website Skill 封面 Demo](./demo/previous-cases/website-skill-8-palettes.jpg)
 
 ![跨平台生成封面 Demo](./demo/generated-platform-demos/generated-platform-contact-sheet.jpg)
 
