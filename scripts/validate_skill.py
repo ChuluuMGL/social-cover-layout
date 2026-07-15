@@ -20,6 +20,7 @@ REQUIRED = [
     "references/color-system.md",
     "references/visual-routes.md",
     "references/quality-gate.md",
+    "references/multilingual-typesetting.md",
     "TESTING.md",
     "PUBLISHING.md",
 ]
@@ -38,7 +39,7 @@ def main() -> int:
     skill = (ROOT / "SKILL.md").read_text(encoding="utf-8")
     if not skill.startswith("---\n") or "name: social-cover-layout" not in skill:
         fail("SKILL.md frontmatter is missing or has the wrong name")
-    for marker in ("adaptive-composite", "generation_mode", "quality-gate"):
+    for marker in ("adaptive-composite", "generation_mode", "quality-gate", "text_mode", "locale"):
         if marker not in skill:
             fail(f"SKILL.md is missing marker: {marker}")
 
