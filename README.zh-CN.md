@@ -1,7 +1,7 @@
 # Social Cover Layout
 
 > **面向 AI Agent 的社交媒体封面 Skill**  
-> 把已经完成的内容 brief 路由成适配小红书、X/Twitter、YouTube、微信公众号及其他媒体表面的原创封面方案或生成封面。
+> 把已经完成的内容 brief 路由成适配小红书、X/Twitter、YouTube、微信公众号、Instagram、LinkedIn、TikTok 及其他媒体表面的原创封面方案或生成封面。
 >
 > 由 **Chuluu** 创建和维护。
 
@@ -14,7 +14,7 @@
 [![Workflow](https://img.shields.io/badge/workflow-adaptive--composite-purple)](./references/visual-routes.md)
 [![QA](https://img.shields.io/badge/QA-quality--gate-blue)](./references/quality-gate.md)
 
-[GitHub 仓库](https://github.com/ChuluuMGL/social-cover-layout) | [Skill 定义](./SKILL.md) | [视觉路线](./references/visual-routes.md) | [配色系统](./references/color-system.md) | [质量门](./references/quality-gate.md) | [测试矩阵](./TESTING.md) | [发布边界](./PUBLISHING.md)
+[GitHub 仓库](https://github.com/ChuluuMGL/social-cover-layout) | [Skill 定义](./SKILL.md) | [平台规格](./references/platform-specs.md) | [视觉路线](./references/visual-routes.md) | [配色系统](./references/color-system.md) | [质量门](./references/quality-gate.md) | [测试矩阵](./TESTING.md) | [发布边界](./PUBLISHING.md)
 
 ## 3 分钟开始使用
 
@@ -55,6 +55,9 @@ cd social-cover-layout
 - 小红书笔记首图：突出首屏停留、收藏价值和结果承诺。
 - X/Twitter 配图：突出一秒理解和转发，不画平台按钮。
 - YouTube 缩略图：16:9，更短标题、更大主体和更强冲突。
+- Instagram：信息流默认 4:5，Reel 封面走 9:16，并预留主页裁切安全区。
+- LinkedIn：网站分享卡默认 1.91:1，文章封面使用超宽编辑版。
+- TikTok：视频封面默认 9:16；它是视频优先平台，不能把普通静态图广告规格当成统一帖子规格。
 - Skill、工具或产品发布：用人物、电脑、网页卡片或界面作为可信证据。
 - 内容创作流程交接：正文完成后，询问是否将 brief 交给封面 Skill。
 - 没有人像时：使用产品界面、电脑、手部、字体或场景承担主视觉。
@@ -84,8 +87,8 @@ purpose: "click | save | tutorial | proof | series-recognition"
 selected_title: ""
 hook: ""
 visual_anchor: "person | screenshot | product | laptop | hand | typography | scene"
-platform: "xiaohongshu | x | youtube | wechat | other"
-surface: "note-cover | post-image | thumbnail | article-cover | share-card"
+platform: "xiaohongshu | x | youtube | wechat | instagram | linkedin | tiktok | other"
+surface: "note-cover | post-image | thumbnail | reel-cover | article-cover | share-card | image-ad"
 ratio: ""
 generation_mode: "prompt-only | generate"
 ```

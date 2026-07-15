@@ -26,6 +26,9 @@
     "x twitter",
     "youtube thumbnail",
     "wechat",
+    "instagram",
+    "linkedin",
+    "tiktok",
     "adaptive composite",
     "cover layout",
     "agent skills",
@@ -45,6 +48,9 @@
     "x",
     "youtube",
     "wechat",
+    "instagram",
+    "linkedin",
+    "tiktok",
     "other"
   ],
   "outputs": [
@@ -59,7 +65,8 @@
   "references": {
     "visual_routes": "references/visual-routes.md",
     "color_system": "references/color-system.md",
-    "quality_gate": "references/quality-gate.md"
+    "quality_gate": "references/quality-gate.md",
+    "platform_specs": "references/platform-specs.md"
   },
   "compatibility": {
     "format": "Agent Skills / SKILL.md",

@@ -13,6 +13,7 @@ The validator checks:
 - the three visual reference files;
 - English and Simplified Chinese README sections;
 - required release and publishing documents.
+- `references/platform-specs.md` and its explicit source-status labels.
 
 ## Visual acceptance matrix
 
@@ -41,3 +42,7 @@ When comparing routes or palettes, keep the following fixed:
 4. the same generation model and output size.
 
 Change one visual variable at a time. A template-composited preview is not evidence of image-model performance and must be labeled separately from an independently generated cover.
+
+## Cross-platform test case
+
+See [`PLATFORM_TEST_REPORT.md`](./PLATFORM_TEST_REPORT.md) for the `Website Skill / 快速建站` test across Xiaohongshu, X, YouTube, WeChat, Instagram, LinkedIn, and TikTok. The local PNGs and deterministic browser harness are kept under `output/platform-tests/` and are intentionally ignored from the package.

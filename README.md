@@ -1,7 +1,7 @@
 # Social Cover Layout
 
 > **Platform-aware social cover Skill for AI Agents**  
-> An open-source Agent Skill that turns a finished content brief into an original, platform-adapted cover plan or generated cover for Xiaohongshu, X/Twitter, YouTube, WeChat, and other media surfaces.
+> An open-source Agent Skill that turns a finished content brief into an original, platform-adapted cover plan or generated cover for Xiaohongshu, X/Twitter, YouTube, WeChat, Instagram, LinkedIn, TikTok, and other media surfaces.
 >
 > Created and maintained by **Chuluu**.
 
@@ -14,7 +14,7 @@
 [![Workflow](https://img.shields.io/badge/workflow-adaptive--composite-purple)](./references/visual-routes.md)
 [![QA](https://img.shields.io/badge/QA-quality--gate-blue)](./references/quality-gate.md)
 
-[GitHub Repository](https://github.com/ChuluuMGL/social-cover-layout) | [Skill Definition](./SKILL.md) | [Visual Routes](./references/visual-routes.md) | [Color System](./references/color-system.md) | [Quality Gate](./references/quality-gate.md) | [Testing Matrix](./TESTING.md) | [Publishing Boundary](./PUBLISHING.md)
+[GitHub Repository](https://github.com/ChuluuMGL/social-cover-layout) | [Skill Definition](./SKILL.md) | [Platform Specs](./references/platform-specs.md) | [Visual Routes](./references/visual-routes.md) | [Color System](./references/color-system.md) | [Quality Gate](./references/quality-gate.md) | [Testing Matrix](./TESTING.md) | [Publishing Boundary](./PUBLISHING.md)
 
 ## 3-Minute Quick Start
 
@@ -59,6 +59,9 @@ The Skill can also be called by a content-production workflow after the writing 
 | Xiaohongshu note cover | "Use the note brief to make a 3:4 cover with a bold result promise." |
 | X/Twitter post image | "Adapt this idea into a square or horizontal social card with one-second comprehension." |
 | YouTube thumbnail | "Make a 16:9 thumbnail with a shorter title, larger subject, and stronger contrast." |
+| Instagram feed / Reel cover | "Use 4:5 for feed or 9:16 for Reels, keeping the title in the center-safe area." |
+| LinkedIn share / article cover | "Use a proof-first 1.91:1 card or an editorial 10:3 article header." |
+| TikTok video cover | "Use a 9:16 video-first composition with central safe-area text." |
 | Tool or Skill launch | "Show the product, laptop, or interface as proof while keeping the person and title readable." |
 | Content workflow handoff | "After writing the note, ask whether to route the brief to the cover Skill." |
 | No-person cover | "Create a cover using a product interface, laptop, hand, type, or scene as the visual anchor." |
@@ -110,8 +113,8 @@ purpose: "click | save | tutorial | proof | series-recognition"
 selected_title: ""
 hook: ""
 visual_anchor: "person | screenshot | product | laptop | hand | typography | scene"
-platform: "xiaohongshu | x | youtube | wechat | other"
-surface: "note-cover | post-image | thumbnail | article-cover | share-card"
+platform: "xiaohongshu | x | youtube | wechat | instagram | linkedin | tiktok | other"
+surface: "note-cover | post-image | thumbnail | reel-cover | article-cover | share-card | image-ad"
 ratio: ""
 generation_mode: "prompt-only | generate"
 ```

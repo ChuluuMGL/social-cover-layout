@@ -33,8 +33,8 @@ purpose: "click | save | tutorial | proof | series-recognition"
 selected_title: ""
 hook: ""
 visual_anchor: "person | screenshot | product | laptop | hand | typography | scene"
-platform: "xiaohongshu | x | youtube | wechat | other"
-surface: "note-cover | post-image | thumbnail | article-cover | share-card"
+platform: "xiaohongshu | x | youtube | wechat | instagram | linkedin | tiktok | other"
+surface: "note-cover | post-image | thumbnail | reel-cover | article-cover | share-card | image-ad"
 ratio: ""
 person_reference: []
 asset_references: []
@@ -51,12 +51,16 @@ generation_mode: "prompt-only | generate"
 - 观点、品牌故事、生活方式：照片或场景主导。
 - 排版、字体、设计教程：文字或数字成为主视觉。
 
-### 2. 再判断平台表面
+### 2. 再判断平台表面和规格
 
-- 小红书首图：3:4，优先首屏停留和收藏；默认一个主标题、一个主体，不塞正文小字。
-- X/Twitter 帖子图：横向或方形，优先一秒理解和转发；不画入 X 的界面按钮。
+- 先读取 `references/platform-specs.md`，同时确认 `platform` 和 `surface`；同一平台的 organic、广告、缩略图和文章封面不能混用规格。
+- 小红书首图：默认 3:4，优先首屏停留和收藏；默认一个主标题、一个主体，不塞正文小字。该比例在本 Skill 中标为工作默认值，发布前以当前上传器为准。
+- X/Twitter organic 帖子图：优先 16:9 或 1:1，一秒理解和转发；不画入 X 的界面按钮。X 广告另走广告比例，不自动复用帖子图。
 - YouTube thumbnail：16:9，标题更短、主体更大、对比更强；不画播放条或平台 UI。
-- 微信公众号/分享图：按 21:9 或 1:1 分别重新构图，不能把小红书图拉伸过去。
+- 微信公众号/分享图：按 21:9 或 1:1 分别重新构图，不能把小红书图拉伸过去；该比例在本 Skill 中标为工作默认值。
+- Instagram feed：默认 4:5；Reel cover 走 9:16，并把标题和主体放在中间安全区以应对个人主页裁切。
+- LinkedIn 分享卡：默认 1.91:1；文章封面走超宽版，标题减少、证据优先。
+- TikTok：视频封面/竖版素材默认 9:16；它是视频优先平台，不能把静态图广告规格当成统一的普通帖子规则。
 
 ### 3. 进入统一的 adaptive-composite 系统
 
@@ -94,7 +98,7 @@ generation_mode: "prompt-only | generate"
 
 1. 接收 content brief，不重复询问已经提供的信息。
 2. 提炼主标题、视觉主体、证明元素和目标动作。
-3. 根据平台和内容选择 `adaptive-composite` 的内部优先级、语义换行、关键词变色、层叠动作和颜色 Token。
+3. 根据平台、surface 和内容选择 `adaptive-composite` 的内部优先级、语义换行、关键词变色、层叠动作、颜色 Token 和安全区。
 4. 写入任务目录的 `prompts/{case}-{route}-{ratio}.md`。
 5. 用户明确要求出图时，调用当前运行时图片生成能力；没有人像时使用产品/界面/字体主体。
 6. 检查比例、标题可读性、主体安全区、人物/产品完整性和额外文字。
