@@ -5,6 +5,12 @@
 - Renamed the public Skill and repository identity from `content-cover-router` to `social-cover-layout`.
 - Kept `content-cover-router` as a legacy/internal compatibility name in the documentation and metadata.
 
+## 0.2.3 — 2026-07-15
+
+- Replaced the multilingual card-sheet specimen with five independent cover images.
+- Kept the proven Chinese cover composition while using distinct blue, yellow, purple, and green language variants.
+- Clarified that multilingual demos are cover outputs, not typography charts or palette sheets.
+
 ## 0.2.2 — 2026-07-15
 
 - Added a platform demo gallery for X, WeChat Official Account, YouTube, and Bilibili outputs.

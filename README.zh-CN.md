@@ -8,7 +8,7 @@
 [English](README.md) | 中文说明
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-social--cover--layout-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-0.2.2-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-0.2.3-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![by Chuluu](https://img.shields.io/badge/by-Chuluu-0E5E43)](https://github.com/ChuluuMGL)
 [![Workflow](https://img.shields.io/badge/workflow-adaptive--composite-purple)](./references/visual-routes.md)
@@ -44,7 +44,7 @@ cd social-cover-layout
 
 ![跨平台生成封面 Demo](./demo/generated-platform-demos/generated-platform-contact-sheet.jpg)
 
-![P0 多语言排版 Demo](./demo/multilingual-p0-demos/p0-language-contact-sheet.svg)
+查看五张独立的 [P0 多语言封面 Demo](./demo/multilingual-p0-demos/)。
 
 完整内容见[Demo 图库](./demo/README.md)。
 

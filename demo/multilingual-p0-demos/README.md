@@ -1,23 +1,37 @@
-# P0 multilingual demos
+# P0 multilingual cover demos
 
-This is a controlled-typeset typography demo for the five P0 languages currently covered by the Skill:
+These are five independent cover images using the same proven bold cover language as the Chinese Website Skill and Content Creation Skill cases: oversized extruded title, high-contrast background, a clear person/product anchor, and intentional foreground overlap.
 
-- Simplified Chinese (`zh-Hans`)
-- Traditional Chinese (`zh-Hant`)
-- English (`en`)
-- Japanese (`ja`)
-- Korean (`ko`)
+The language changes; the cover remains a cover. These are not a language chart, card grid, infographic, or color palette sheet.
 
-![P0 multilingual typography demos](./p0-language-contact-sheet.svg)
+## Simplified Chinese
 
-The panels intentionally use different accent colors, but color is not the variable being tested. The demo shows semantic line grouping, stable baselines, script-appropriate punctuation, and the same layered cover logic across languages.
+![Simplified Chinese cover](./zh-hans-content-creation-skill.png)
 
-This is a typography and layout QA specimen, not five independent image-model generations. It demonstrates the `controlled-typeset` path used when the title must be exact. The generated platform examples remain in [`../generated-platform-demos/`](../generated-platform-demos/).
+Title: `内容创作 Skill / 写笔记还能做封面` · Palette: sunny yellow · Layout family: vertical
 
-| Language | Title grouping | Text mode | Layout family |
-|---|---|---|---|
-| Simplified Chinese | `内容创作 Skill` / `写作与封面一次完成` | `controlled-typeset` | `vertical` |
-| Traditional Chinese | `內容創作 Skill` / `寫作與封面一次完成` | `controlled-typeset` | `vertical` |
-| English | `Content Creation Skill` / `Write + Cover` | `hybrid` | `wide` |
-| Japanese | `コンテンツ制作 Skill` / `書いて表紙も完成` | `controlled-typeset` | `square` |
-| Korean | `콘텐츠 제작 Skill` / `쓰고 커버까지` | `controlled-typeset` | `square` |
+## Traditional Chinese
+
+![Traditional Chinese cover](./zh-hant-content-creation-skill.png)
+
+Title: `內容創作 Skill / 寫筆記也能做封面` · Palette: cobalt blue · Layout family: vertical
+
+## English
+
+![English cover](./en-content-creation-skill.png)
+
+Title: `CONTENT CREATION SKILL / WRITE + COVER` · Palette: sunny yellow · Layout family: vertical
+
+## Japanese
+
+![Japanese cover](./ja-content-creation-skill.png)
+
+Title: `コンテンツ制作 Skill / 書いて表紙も完成` · Palette: magenta purple · Layout family: vertical
+
+## Korean
+
+![Korean cover](./ko-content-creation-skill.png)
+
+Title: `콘텐츠 제작 Skill / 쓰고 커버까지` · Palette: emerald green · Layout family: vertical
+
+These are generated visual demos, not proof of click-through rate or platform acceptance. Exact text, font rights, people, screenshots, and model-output terms still require final QA before publishing.
