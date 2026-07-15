@@ -10,9 +10,7 @@ The [generated platform demo pack](./generated-platform-demos/) contains indepen
 
 ## P0 multilingual typography
 
-The [P0 multilingual demo](./multilingual-p0-demos/) covers Simplified Chinese, Traditional Chinese, English, Japanese, and Korean. It uses varied accent colors only to keep the cases visually distinct; the test variables are script-aware line breaks, stable baselines, and exact-title handling.
-
-![P0 multilingual typography demos](./multilingual-p0-demos/p0-language-contact-sheet.svg)
+The [P0 multilingual demo](./multilingual-p0-demos/) now contains five independent cover images for Simplified Chinese, Traditional Chinese, English, Japanese, and Korean. Each one keeps the proven cover composition and changes only the language brief and supporting palette; it is not a five-language card sheet.
 
 ## Featured generated outputs
 
