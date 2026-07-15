@@ -8,7 +8,7 @@
 [中文说明](README.zh-CN.md) | English
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-social--cover--layout-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-0.2.1-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-0.2.2-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![by Chuluu](https://img.shields.io/badge/by-Chuluu-0E5E43)](https://github.com/ChuluuMGL)
 [![Workflow](https://img.shields.io/badge/workflow-adaptive--composite-purple)](./references/visual-routes.md)
@@ -40,11 +40,13 @@ The Skill can also be called by a content-production workflow after the writing 
 
 ## Demo Preview
 
-These are actual generated outputs from the earlier Website Skill and Content Creation Skill tests. The new [generated cross-platform demos](./demo/generated-platform-demos/) cover X, WeChat Official Account, YouTube, and Bilibili. The platform-ratio checks are kept separately in the [technical test pack](./demo/technical-platform-tests/).
+These are actual generated outputs from the earlier Website Skill and Content Creation Skill tests. The [generated cross-platform demos](./demo/generated-platform-demos/) cover X, WeChat Official Account, YouTube, and Bilibili; the [P0 multilingual demo](./demo/multilingual-p0-demos/) covers Simplified Chinese, Traditional Chinese, English, Japanese, and Korean. The platform-ratio checks are kept separately in the [technical test pack](./demo/technical-platform-tests/).
 
 ![Website Skill cover demo](./demo/previous-cases/website-skill-8-palettes.jpg)
 
 ![Generated cross-platform cover demos](./demo/generated-platform-demos/generated-platform-contact-sheet.jpg)
+
+![P0 multilingual typography demos](./demo/multilingual-p0-demos/p0-language-contact-sheet.svg)
 
 See the full [Demo Gallery](./demo/README.md).
 

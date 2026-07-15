@@ -1,12 +1,18 @@
 # Demo gallery
 
-These are the actual generated outputs from the cover tests that led to the current `social-cover-layout` rules. They are the primary demo; the platform specification checks are listed separately below.
+These are the actual generated outputs and controlled typography specimens from the cover tests that led to the current `social-cover-layout` rules. The gallery now demonstrates platform adaptation and P0 multilingual layout; the platform specification checks are listed separately below.
 
 ## Generated cross-platform demos
 
 The [generated platform demo pack](./generated-platform-demos/) contains independent image-model generations for X, WeChat Official Account, YouTube, and Bilibili.
 
 ![Generated cross-platform demos](./generated-platform-demos/generated-platform-contact-sheet.jpg)
+
+## P0 multilingual typography
+
+The [P0 multilingual demo](./multilingual-p0-demos/) covers Simplified Chinese, Traditional Chinese, English, Japanese, and Korean. It uses varied accent colors only to keep the cases visually distinct; the test variables are script-aware line breaks, stable baselines, and exact-title handling.
+
+![P0 multilingual typography demos](./multilingual-p0-demos/p0-language-contact-sheet.svg)
 
 ## Featured generated outputs
 
