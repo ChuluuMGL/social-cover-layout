@@ -1,0 +1,42 @@
+name: Validate
+
+# Runs the maintainer's local checks in CI: metadata parses, the skill package
+# passes scripts/validate_skill.py, and the version is consistent across
+# skill.json / package.json / README badges / CHANGELOG. Stdlib-only.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Skill package + version consistency
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: JSON parses (skill.json + package.json + repository metadata)
+        run: |
+          set -euo pipefail
+          for f in skill.json package.json .github/repository-metadata.json; do
+            python3 -m json.tool "$f" >/dev/null
+            echo "ok: $f"
+          done
+
+      - name: Validate skill package
+        run: python3 scripts/validate_skill.py
+
+      - name: Version consistency (skill.json / package.json / README badges / CHANGELOG)
+        run: python3 scripts/check_release_consistency.py
+
+      - name: Python scripts compile
+        run: python3 -m py_compile scripts/*.py

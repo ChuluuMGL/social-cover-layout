@@ -3,6 +3,6 @@
   "private": false,
   "version": "0.2.4",
   "scripts": {
-    "validate": "python3 scripts/validate_skill.py"
+    "validate": "python3 scripts/validate_skill.py && python3 scripts/check_release_consistency.py"
   }
 }
