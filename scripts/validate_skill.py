@@ -21,6 +21,10 @@ REQUIRED = [
     "references/visual-routes.md",
     "references/quality-gate.md",
     "references/multilingual-typesetting.md",
+    "references/production-rendering.md",
+    "scripts/render_cover.py",
+    "requirements-render.txt",
+    "tests/test_render_cover.py",
     "TESTING.md",
     "PUBLISHING.md",
 ]

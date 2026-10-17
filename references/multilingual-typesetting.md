@@ -38,6 +38,8 @@ All five current P0 profiles use `ltr`. The schema keeps `direction` for forward
 
 The final image must be checked after compositing. A prompt that asks for correct text is not evidence that the model rendered correct text.
 
+For an executable 16:9 / 3:4 LTR workflow, read [production-rendering.md](production-rendering.md). The local helper checks font cmap coverage, uses approved explicit title lines, and writes the exact canvas plus a 25% thumbnail and QA JSON. It requires a local font and optional Python dependencies. It does not generate artwork, shape RTL, translate, inspect background text, or certify visual acceptance; other ratios and scripts need an appropriate host renderer and manual review.
+
 ## Font and fallback rules
 
 - Select a font with complete glyph coverage for the requested P0 script before composing the title.

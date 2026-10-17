@@ -2,7 +2,7 @@ name: Validate
 
 # Runs the maintainer's local checks in CI: metadata parses, the skill package
 # passes scripts/validate_skill.py, and the version is consistent across
-# skill.json / package.json / README badges / CHANGELOG. Stdlib-only.
+# skill.json / package.json / README badges / CHANGELOG, plus offline rendering.
 
 on:
   push:
@@ -40,3 +40,12 @@ jobs:
 
       - name: Python scripts compile
         run: python3 -m py_compile scripts/*.py
+
+      - name: Install local rendering dependencies and CJK font
+        run: |
+          python3 -m pip install -r requirements-render.txt
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto-cjk
+
+      - name: Offline Chinese rendering and installed-folder regression
+        run: python3 -m unittest discover -s tests -v

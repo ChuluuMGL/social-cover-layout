@@ -6,6 +6,15 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.2.5] - 2026-10-18
+
+### Fixed
+
+- Added explicit Codex installation, host-capability routing, and prompt-only delivery when image generation is unavailable.
+- Made the hybrid title path executable for 16:9 and 3:4: optional local font rendering, exact export dimensions, source-preserving contain fit, a 25% thumbnail and a QA record.
+- Check required glyphs and safe text bounds; reject unreadable overflow and existing output names. Keep visual/likeness/background review explicit instead of treating successful rendering as approval.
+- Added offline Chinese wide/vertical and failure-path regression tests plus clean installed-folder invocation; CI runs rendering tests before a version is tagged.
+
 ### Added
 
 - `.github/workflows/validate.yml`: CI runs `scripts/validate_skill.py` and the version consistency check.

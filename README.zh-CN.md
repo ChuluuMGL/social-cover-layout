@@ -8,7 +8,7 @@
 [English](README.md) | 中文说明
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-social--cover--layout-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-0.2.4-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-0.2.5-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![by Chuluu](https://img.shields.io/badge/by-Chuluu-0E5E43)](https://github.com/ChuluuMGL)
 [![Workflow](https://img.shields.io/badge/workflow-adaptive--composite-purple)](./references/visual-routes.md)
@@ -18,12 +18,24 @@
 
 ## 3 分钟开始使用
 
+Codex在macOS/Linux的默认个人安装目录示例：
+
+~~~bash
+mkdir -p "$HOME/.codex/skills"
+git clone https://github.com/ChuluuMGL/social-cover-layout.git \
+  "$HOME/.codex/skills/social-cover-layout"
+~~~
+
+已有同名目录时先保留并检查来源，再决定如何更新。配置了自定义CODEX_HOME时，改用其skills目录。安装后在新会话里让Agent读取该目录的SKILL.md并确认名称；这只能确认已识别Skill，生图能力还要单独确认。
+
+也可以只克隆工作目录，并明确让Agent读取其中的SKILL.md：
+
 ```bash
 git clone https://github.com/ChuluuMGL/social-cover-layout.git
 cd social-cover-layout
 ```
 
-把仓库根目录或 Skill 文件夹放到兼容 Agent Skills 的目录中，然后调用：
+其他兼容宿主按各自的安装目录操作，或直接读取仓库根目录；不能据此声称所有宿主的生图能力都已实测。安装后调用：
 
 ```text
 使用 $social-cover-layout，把这篇已经完成的小红书笔记做成 3:4 封面。
@@ -35,6 +47,15 @@ cd social-cover-layout
 ```
 
 它也可以由内容创作流程在正文完成后，通过结构化 brief 调用。
+
+### 生图能力与费用
+
+- 宿主有图像工具：使用现有工具和用户给定的调用范围。本Skill不提供模型账户或调用额度。
+- 宿主没有图像工具：用prompt-only模式，交付可复制提示词和版式说明，明确标注尚未出图。
+- 中文标题需要准确时：按[可执行的生成与排字流程](references/production-rendering.md)，先做预留标题区的无字画面，再用本地真实字体排字。可选Python工具支持16:9与3:4，输出精确尺寸、25%缩略图和检查JSON，已有文件不会覆盖。
+- 直接由模型生成整张含字图片的方式仍保留，需逐字检查标题和背景小字。
+
+免费开源的是Skill源码，模型用量可能由宿主计费。本地排字需Python 3.10+、Pillow、fonttools和用户自己的可用字体，不调用模型或上传文件。
 
 ## Demo 样张
 
@@ -144,7 +165,15 @@ generation_mode: "prompt-only | generate"
 npm run validate
 ```
 
-校验会检查 frontmatter、必要参考文件、JSON 元数据、README 链接和独立仓库结构。最终视觉仍需要人工在手机缩略图尺寸下复核。
+校验会检查 frontmatter、必要参考文件、JSON 元数据、README 必要章节、版本一致性和独立仓库结构。最终视觉仍需要人工在手机缩略图尺寸下复核。
+
+离线排字测试：先按[排字指南](references/production-rendering.md)安装requirements-render.txt，再运行：
+
+~~~bash
+.venv/bin/python -m unittest discover -s tests -v
+~~~
+
+测试需要真实的中文/拉丁字体；默认macOS/Ubuntu候选不可用时，用COVER_TEST_FONT指定路径。覆盖尺寸、文字边界、缺字、超长标题、源图保留、输出冲突和独立安装目录调用。纯色测试图只是排字夹具，不是AI生图案例。
 
 ## 许可证
 

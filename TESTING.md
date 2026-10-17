@@ -16,7 +16,21 @@ The validator checks:
 - `references/platform-specs.md` and its explicit source-status labels.
 - `references/multilingual-typesetting.md` and the locale-aware metadata markers.
 
-## Visual acceptance matrix
+## Executable rendering regression
+
+Install the optional requirements-render.txt into a Python 3.10+ environment and run:
+
+~~~bash
+python3 -m unittest discover -s tests -v
+~~~
+
+The tests require a Chinese/Latin font. Auto-discovery covers macOS STHeiti and Ubuntu Noto CJK; otherwise set COVER_TEST_FONT (and COVER_TEST_FONT_INDEX for a collection face). Missing fonts fail clearly rather than silently skipping. CI installs fonts-noto-cjk.
+
+This runs exact 16:9/3:4 exports, glyph/bounds/overflow validation, no-crop source preservation, no-overwrite behavior and invocation from an isolated installed directory with an unrelated current directory. It makes no image API calls and cannot prove agent discovery, subjective image quality or platform performance.
+
+For real artwork, follow [production-rendering.md](references/production-rendering.md) and inspect both the final PNG and its thumbnail. The renderer writes manual-review intentionally; automatic checks do not approve a generated face or background.
+
+## Visual review
 
 Each generated cover should be reviewed at full size and at a lightweight 25% phone-thumbnail preview.
 

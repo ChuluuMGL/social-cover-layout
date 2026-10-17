@@ -8,7 +8,7 @@
 [中文说明](README.zh-CN.md) | English
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-social--cover--layout-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-0.2.4-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-0.2.5-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![by Chuluu](https://img.shields.io/badge/by-Chuluu-0E5E43)](https://github.com/ChuluuMGL)
 [![Workflow](https://img.shields.io/badge/workflow-adaptive--composite-purple)](./references/visual-routes.md)
@@ -18,12 +18,24 @@
 
 ## 3-Minute Quick Start
 
+For Codex's default user skill directory on macOS/Linux:
+
+~~~bash
+mkdir -p "$HOME/.codex/skills"
+git clone https://github.com/ChuluuMGL/social-cover-layout.git \
+  "$HOME/.codex/skills/social-cover-layout"
+~~~
+
+If that folder already exists, preserve it and inspect its source before updating. If you configured a custom CODEX_HOME, use its skills directory instead. Open a new session and ask the agent to read the installed SKILL.md and state its name. That confirms discovery; it does not confirm that an image tool is available.
+
+Alternatively, clone a working folder and explicitly point your agent at its SKILL.md:
+
 ```bash
 git clone https://github.com/ChuluuMGL/social-cover-layout.git
 cd social-cover-layout
 ```
 
-Install the folder into a compatible Agent Skills directory, or point your agent at the repository root.
+Other SKILL.md hosts can use their documented skill directory or read the repository root directly. Their installation paths and image capabilities are host-specific; this repository does not verify every runtime.
 
 Invoke:
 
@@ -37,6 +49,15 @@ Generation mode: generate.
 ```
 
 The Skill can also be called by a content-production workflow after the writing brief is complete.
+
+### Image capability and cost
+
+- With a host image tool, use that tool within the user's existing limits. This Skill does not supply a model account or API credits.
+- Without one, ask for generation mode prompt-only. The result is a reusable prompt and layout brief, clearly marked not generated.
+- For exact Chinese titles, use the [executable hybrid workflow](references/production-rendering.md): text-free art first, then a local licensed font. The optional Python helper supports 16:9 and 3:4, exports exact dimensions plus a 25% thumbnail and QA JSON, and refuses overwrites.
+- Model-rendered whole-image text remains available; it requires literal title and background-text review.
+
+The Skill source is free/MIT. Model usage may be billed by the host. Local rendering needs Python 3.10+, Pillow, fonttools and a user-supplied font; it does not call a model or upload files.
 
 ## Demo Preview
 
@@ -175,7 +196,15 @@ See [`references/quality-gate.md`](./references/quality-gate.md) for the full ch
 npm run validate
 ```
 
-This validates the frontmatter, required references, JSON metadata, README links, and the standalone package shape. Visual output still requires human review at thumbnail size.
+This validates the frontmatter, required references, JSON metadata, required README sections, version consistency and the standalone package shape. Visual output still requires human review at thumbnail size.
+
+For offline rendering tests, install requirements-render.txt in a virtual environment as shown in the [rendering guide](references/production-rendering.md), then run:
+
+~~~bash
+.venv/bin/python -m unittest discover -s tests -v
+~~~
+
+Tests require a real Chinese/Latin font. Set COVER_TEST_FONT to its path if the macOS/Ubuntu candidates are unavailable. These checks exercise export dimensions, text bounds, missing glyphs, overflow, source preservation, output collisions and invocation from a clean installed folder. Solid-color fixtures are not AI-generated artwork.
 
 ## License
 
